@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:government_documents/screens/profileScreen.dart';
+import 'package:government_documents/screens/documentsScreen.dart';
 import 'package:government_documents/screens/SectionScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
   final List<Widget> _screens = [
     SectionScreen(),
-    ProfileScreen(),
+    DocumentsScreen(),
   ];
 
   @override
@@ -35,7 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.black,
+        // type: BottomNavigationBarType.fixed,
+        fixedColor: Color(0xff272829),
         backgroundColor: Colors.white,
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -49,11 +50,17 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'الملف الشخصي',
+            icon: Icon(Icons.picture_in_picture),
+            label: 'المستندات المرسلة',
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.send, size: 30),
+        backgroundColor: Color(0xff272829),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: _screens[_currentIndex],
     );
   }

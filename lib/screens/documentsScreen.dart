@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
+class DocumentsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[200],
       child: Center(
         child: Text(
-          'الملف الشخصي',
+          'المستندات',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
