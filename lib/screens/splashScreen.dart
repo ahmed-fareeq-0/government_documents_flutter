@@ -85,17 +85,6 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Spacer(),
-          SizedBox(
-            height: 20,
-          ),
-          GestureDetector(
-            onTap: () {},
-            child: Text(
-              'هل نسيت كلمة المرور؟',
-              style: TextStyle(fontSize: 18, color: Colors.white),
-            ),
-          ), //
         ]),
       ),
     );
